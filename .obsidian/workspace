@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "c90fcfe278a2e87f",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c141ed5e3d4b92b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_notes/Test.note.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "aa632589a3b98dd0",
+    "type": "split",
+    "children": [
+      {
+        "id": "3004173f17501721",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "084a092e86d68b72",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2ed6637c724239e7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c4a1f8fd5915e947",
+    "type": "split",
+    "children": [
+      {
+        "id": "dc820f0a61d5ca6a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2bde0a2b3615f3f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_notes/Test.note.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "7c141ed5e3d4b92b",
+  "lastOpenFiles": [
+    "_notes/Test.note.md",
+    "_notes/Obsidian integration.md",
+    "_notes/How-to-setup-this-site.md"
+  ]
+}
