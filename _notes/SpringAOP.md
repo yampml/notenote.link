@@ -1,6 +1,6 @@
 ---
 title: Spring AOP
-tags: [[Spring]], [[AOP]]
+tags: Spring, AOP
 season: winter
 ---
 
