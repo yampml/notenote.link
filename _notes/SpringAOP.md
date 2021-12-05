@@ -1,6 +1,6 @@
 ---
 title: Spring AOP
-tags: Spring, AOP
+tags: Spring AOP
 season: winter
 ---
 
@@ -132,4 +132,86 @@ private void forSetter()
 private void forAllExceptGetSet()
 ```
 
+### Control Aspect Order
+- How to control the order of advices being applied?
+	- Place advices in separate Aspects
+	- Control order on Aspects using the @Order annotation
 
+- Examples
+
+```java
+@Aspect
+@Component
+@Order(1)
+public class SomeAspect1 {}
+
+@Aspect
+@Component
+@Order(2)
+public class SomeAspect2 {}
+
+@Aspect
+@Component
+@Order(3)
+public class SomeAspect3 {}
+```
+
+-	Lower numbers have higher precedence
+-	Range: Integer.MIN_VALUE - Integer.MAX_VALUE
+-	Negative numbers are allowed
+
+### Join Points
+- When we are in an aspect, how can we access method parameters
+	- Access and display Method Signature
+	```java
+	@Before("...")
+	public void beforeAddAccountAdvice(JoinPoint theJoinPoint) {
+		MethodSignature methodSig = (MethodSignature) theJoinPoint.getSignature();
+		...
+	}
+	// JoinPoint has metadata about the method call
+	```
+
+	- Access and display Method Arguments
+	```java
+	@Before(...)
+	public void beforeAddAccountAdvice(JoinPoint theJoinPoint) {
+		Object[] args = theJoinPoint.getArgs();
+		
+		for(Object tempArg:args) {
+		...
+		}
+	
+	}
+	```
+	
+	
+### @AfterReturning Advice
+-	Common use cases:
+	-	Logging, security, transactions
+	-	Audit logging
+	-	Post-process returned data
+
+Example: 
+```java
+@AfterReturning(pointcut = "execution(* com.package.methodName(..))",
+				returning = "result")
+public void afterReturningFindAccountsAdvice(JoinPoint theJointPoint, List<Something> result) {
+	//...
+}
+```
+
+### @AfterThrowing
+- 
+
+### @After Advice
+-	
+
+### @Around
+-	Like a combination of @Before and @After
+-	Use cases:
+	-	logging, auditing, security
+	-	Pre-processing, post-processing data
+	-	Instrumentation / profiling code
+	-	Managing exceptions
+		-	Swallow/handle/stop exceptions
